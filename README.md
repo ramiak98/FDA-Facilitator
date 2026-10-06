@@ -19,6 +19,14 @@ npm run build
 - `src/app/page.tsx`: the homepage
 - `src/components/`: header, footer, logo
 
+## Contact form
+
+The form on `/contact` emails each inquiry through [Resend](https://resend.com). Until it is configured, visitors are asked to email `site.email` instead. To turn it on, add these environment variables in Vercel (see `.env.example`):
+
+- `RESEND_API_KEY`: API key from Resend
+- `CONTACT_TO_EMAIL`: inbox(es) that receive inquiries, comma-separated
+- `CONTACT_FROM_EMAIL`: sender on a domain verified in Resend (optional until a domain is set up)
+
 ## Deploy
 
 Import the repository in Vercel (New Project, select this repo). Framework is detected automatically.

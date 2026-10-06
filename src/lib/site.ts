@@ -12,8 +12,22 @@ export const nav = [
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
   { label: "How it works", href: "/#process" },
-  { label: "Deadlines", href: "/#deadlines" },
+  { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
+];
+
+export const productTypes = [
+  "Food & beverage",
+  "Dietary supplements",
+  "Cosmetics",
+  "Medical devices",
+  "Drugs & OTC",
+  "Other consumer goods",
+];
+
+export const legalNav = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Use", href: "/terms" },
 ];
 
 export type Service = {

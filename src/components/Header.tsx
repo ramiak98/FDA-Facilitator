@@ -48,12 +48,12 @@ export function Header() {
             ),
           )}
         </nav>
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           className="hidden rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-navy-800 md:inline-block"
         >
           Get a consultation
-        </a>
+        </Link>
         <details className="group relative md:hidden">
           <summary className="cursor-pointer list-none rounded-md p-2 text-navy-900 [&::-webkit-details-marker]:hidden">
             <span className="sr-only">Open menu</span>
@@ -82,12 +82,12 @@ export function Header() {
                   ))}
               </div>
             ))}
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="mt-1 block rounded-md bg-brand-600 px-3 py-2 text-center text-sm font-semibold text-white"
             >
               Get a consultation
-            </a>
+            </Link>
           </div>
         </details>
       </div>
