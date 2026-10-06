@@ -4,12 +4,28 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Check, ContactCta, Faqs, HeroImage, SectionHeading, ServiceIcon } from "@/components/ui";
 import { photos, servicePhoto } from "@/lib/images";
-import { deadlines, faqs, industries, services, steps } from "@/lib/site";
+import { deadlines, faqs, industries, services, site, steps } from "@/lib/site";
+
+// Structured data so search engines understand who the business is.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: site.name,
+  description: site.description,
+  url: site.url,
+  email: site.email,
+  areaServed: "US",
+  knowsAbout: ["FDA registration", "US Agent", "FSVP", "Prior Notice", "Customs entry", "USPTO trademarks", "Freight logistics"],
+};
 
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      />
       <Header />
       <main id="top" className="flex-1">
         {/* Hero */}

@@ -27,6 +27,13 @@ The form on `/contact` emails each inquiry through [Resend](https://resend.com).
 - `CONTACT_TO_EMAIL`: inbox(es) that receive inquiries, comma-separated
 - `CONTACT_FROM_EMAIL`: sender on a domain verified in Resend (optional until a domain is set up)
 
+## SEO and analytics
+
+- `src/app/sitemap.ts` and `src/app/robots.ts` generate `/sitemap.xml` and `/robots.txt`.
+- `src/app/opengraph-image.tsx` is the preview image for shared links; `src/app/icon.svg` is the browser icon.
+- Set `NEXT_PUBLIC_SITE_URL` in Vercel when a custom domain goes live so canonical links and the sitemap use it.
+- Vercel Web Analytics is included (`@vercel/analytics`); enable it once in the Vercel project's Analytics tab. It uses no cookies.
+
 ## Deploy
 
 Import the repository in Vercel (New Project, select this repo). Framework is detected automatically.
