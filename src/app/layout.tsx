@@ -9,7 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: `${site.name} | ${site.tagline}`,
+  title: {
+    default: `${site.name} | ${site.tagline}`,
+    template: `%s | ${site.name}`,
+  },
   description: site.description,
   openGraph: {
     title: site.name,
