@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { nav, services, site } from "@/lib/site";
 
@@ -15,10 +16,10 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-white">Services</h3>
             <ul className="mt-4 space-y-2 text-sm">
               {services.map((s) => (
-                <li key={s.id}>
-                  <a href={`#${s.id}`} className="hover:text-white">
+                <li key={s.slug}>
+                  <Link href={`/services/${s.slug}`} className="hover:text-white">
                     {s.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -28,9 +29,9 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {nav.slice(1).map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="hover:text-white">
+                  <Link href={item.href} className="hover:text-white">
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
