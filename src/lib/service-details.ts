@@ -219,7 +219,7 @@ export const serviceDetails: ServiceDetail[] = [
       },
       {
         q: "Is there still a duty-free threshold for low-value shipments?",
-        a: "Duty-free de minimis treatment for shipments valued at $800 or less was suspended for all countries effective August 29, 2025. Low-value shipments now generally need a formal or informal entry and are subject to duties. Rules in this area change often, so we confirm the current position for each shipment.",
+        a: "Duty-free de minimis treatment for low-value shipments has been restricted and suspended in recent years, so many low-value shipments now need a formal or informal entry and are subject to duties. Rules in this area change often, so we confirm the current position for each shipment.",
       },
       {
         q: "What is the difference between an FDA hold and a refusal?",
@@ -293,7 +293,7 @@ export const serviceDetails: ServiceDetail[] = [
       },
     ],
     keyFacts: [
-      { label: "USPTO base filing fee", value: "$350 per class of goods or services (as of 2025)" },
+      { label: "USPTO filing fees", value: "Charged per class of goods or services" },
       { label: "Office action response", value: "3 months, extendable once by 3 months", ref: "37 CFR 2.62" },
       { label: "Declaration of use", value: "Between years 5 and 6 after registration", ref: "15 U.S.C. 1058" },
       { label: "Renewal", value: "Every 10 years", ref: "15 U.S.C. 1059" },

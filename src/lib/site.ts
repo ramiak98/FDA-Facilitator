@@ -115,7 +115,7 @@ export const industries: Industry[] = [
       "Preventive controls and a written food safety plan (21 CFR Part 117)",
       "Labeling, Nutrition Facts and the nine major allergens (21 CFR Part 101)",
       "FCE registration and process filing for acidified and low-acid canned foods (21 CFR Parts 108, 113, 114)",
-      "Food Traceability Rule records for listed foods, with compliance required by July 20, 2028 (21 CFR Part 1, Subpart S)",
+      "Food Traceability Rule records for foods on FDA's Food Traceability List (21 CFR Part 1, Subpart S)",
     ],
     services: ["fda-compliance", "customs-import", "logistics"],
   },
