@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
-import { nav, services, site } from "@/lib/site";
+import { legalNav, nav, services, site } from "@/lib/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -35,6 +35,11 @@ export function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/contact" className="hover:text-white">
+                  Contact
+                </Link>
+              </li>
+              <li>
                 <a href={`mailto:${site.email}`} className="hover:text-white">
                   {site.email}
                 </a>
@@ -51,9 +56,20 @@ export function Footer() {
             advice. Trademark legal services are provided by US-licensed attorneys, and customs
             entries are filed by licensed US customs brokers.
           </p>
-          <p className="mt-4">
-            &copy; {year} {site.name}. All rights reserved.
-          </p>
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
+            <p>
+              &copy; {year} {site.name}. All rights reserved.
+            </p>
+            <ul className="flex gap-6">
+              {legalNav.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="hover:text-white">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

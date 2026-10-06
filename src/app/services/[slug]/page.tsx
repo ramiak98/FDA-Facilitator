@@ -47,12 +47,12 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           ]}
         >
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="#contact"
+            <Link
+              href={`/contact?service=${detail.slug}`}
               className="rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
             >
               Get a consultation
-            </a>
+            </Link>
             <a
               href="#offerings"
               className="rounded-md border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"

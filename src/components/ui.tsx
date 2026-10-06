@@ -114,12 +114,17 @@ export function ContactCta() {
           Tell us about your products and where you ship from. We&apos;ll tell you exactly which
           FDA, CBP and USPTO steps apply.
         </p>
-        <a
-          href={`mailto:${site.email}?subject=Consultation%20request`}
-          className="mt-8 inline-block rounded-md bg-white px-6 py-3 text-sm font-semibold text-brand-600 shadow-sm transition hover:bg-brand-50"
-        >
-          Email {site.email}
-        </a>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <Link
+            href="/contact"
+            className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-brand-600 shadow-sm transition hover:bg-brand-50"
+          >
+            Request a consultation
+          </Link>
+          <a href={`mailto:${site.email}`} className="text-sm font-semibold text-white underline-offset-4 hover:underline">
+            or email {site.email}
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -138,5 +143,32 @@ export function Faqs({ items }: { items: { q: string; a: string }[] }) {
         </details>
       ))}
     </div>
+  );
+}
+
+// Shared layout for long-form legal pages (privacy, terms).
+export function LegalPage({
+  title,
+  updated,
+  intro,
+  children,
+}: {
+  title: string;
+  updated: string;
+  intro: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <main className="flex-1">
+      <PageHero eyebrow="Legal" title={title} text={intro} />
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <p className="text-sm text-slate-500">Last updated: {updated}</p>
+          <div className="mt-8 space-y-10 text-slate-700 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-navy-900 [&_li]:leading-7 [&_p]:mt-3 [&_p]:leading-7 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_a]:font-medium [&_a]:text-brand-600 hover:[&_a]:underline">
+            {children}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

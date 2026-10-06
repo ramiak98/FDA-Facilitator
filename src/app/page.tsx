@@ -36,12 +36,12 @@ export default function Home() {
                 protection and logistics, so you can focus on selling in the United States.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
                 >
                   Get a free consultation
-                </a>
+                </Link>
                 <Link
                   href="/services"
                   className="rounded-md border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
