@@ -6,6 +6,8 @@ export const site = {
   description:
     "FDA Facilitator helps companies bring FDA-regulated products into the United States: FDA registration and US Agent services, customs entry coordination, USPTO trademark filings, and logistics.",
   email: "info@fdafacilitator.com",
+  // Public address of the site. Set NEXT_PUBLIC_SITE_URL once a custom domain is live.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://fda-facilitator.vercel.app",
 };
 
 export const nav = [
