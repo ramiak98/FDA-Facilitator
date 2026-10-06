@@ -1,7 +1,9 @@
 import { Footer } from "@/components/Footer";
+import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { Check, ContactCta, Faqs, SectionHeading, ServiceIcon } from "@/components/ui";
+import { Check, ContactCta, Faqs, HeroImage, SectionHeading, ServiceIcon } from "@/components/ui";
+import { photos, servicePhoto } from "@/lib/images";
 import { deadlines, faqs, industries, services, steps } from "@/lib/site";
 
 
@@ -12,6 +14,7 @@ export default function Home() {
       <main id="top" className="flex-1">
         {/* Hero */}
         <section className="relative overflow-hidden bg-navy-900">
+          <HeroImage photo={photos.hero} />
           <div
             className="absolute inset-0 opacity-30"
             style={{
@@ -103,8 +106,17 @@ export default function Home() {
                 <article
                   key={s.id}
                   id={s.id}
-                  className="flex flex-col scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-brand-500/40 hover:shadow-md"
+                  className="flex flex-col scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-brand-500/40 hover:shadow-md"
                 >
+                  <div className="relative -mx-8 -mt-8 mb-6 h-48 overflow-hidden rounded-t-2xl">
+                    <Image
+                      src={servicePhoto(s.slug)!.src}
+                      alt={servicePhoto(s.slug)!.alt}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="flex items-center gap-4">
                     <ServiceIcon id={s.id} />
                     <div>

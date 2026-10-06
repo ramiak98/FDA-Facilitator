@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Check, ContactCta, Faqs, PageHero, ServiceIcon } from "@/components/ui";
+import { servicePhoto } from "@/lib/images";
 import { getServiceDetail, serviceDetails } from "@/lib/service-details";
 import { services } from "@/lib/site";
 
@@ -39,6 +40,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           eyebrow={detail.agency}
           title={detail.headline}
           text={detail.intro}
+          image={servicePhoto(detail.slug)}
           crumbs={[
             { label: "Services", href: "/services" },
             { label: detail.title, href: `/services/${detail.slug}` },

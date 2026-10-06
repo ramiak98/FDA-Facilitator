@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import type { Photo } from "@/lib/images";
 import { site } from "@/lib/site";
 
 const serviceIcons: Record<string, React.ReactNode> = {
@@ -41,16 +43,19 @@ export function PageHero({
   title,
   text,
   crumbs,
+  image,
   children,
 }: {
   eyebrow: string;
   title: string;
   text: string;
   crumbs?: { label: string; href: string }[];
+  image?: Photo;
   children?: React.ReactNode;
 }) {
   return (
     <section className="relative overflow-hidden bg-navy-900">
+      {image && <HeroImage photo={image} />}
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -85,6 +90,16 @@ export function PageHero({
         {children}
       </div>
     </section>
+  );
+}
+
+// Full-bleed background photo with a navy overlay so white text stays readable.
+export function HeroImage({ photo }: { photo: Photo }) {
+  return (
+    <>
+      <Image src={photo.src} alt={photo.alt} fill preload sizes="100vw" className="object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-900 via-navy-900/85 to-navy-900/50" aria-hidden="true" />
+    </>
   );
 }
 

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Check, ContactCta, PageHero, ServiceIcon } from "@/components/ui";
+import { photos, servicePhoto } from "@/lib/images";
 import { services, steps } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -21,6 +23,7 @@ export default function ServicesPage() {
           title="Everything you need to sell in the United States"
           text="Four services that cover what FDA, CBP and the USPTO expect from foreign manufacturers and US importers. Use one, or let us run the whole process."
           crumbs={[{ label: "Services", href: "/services" }]}
+          image={photos.services}
         />
 
         <section className="py-16 sm:py-20">
@@ -28,8 +31,17 @@ export default function ServicesPage() {
             {services.map((s) => (
               <article
                 key={s.slug}
-                className="grid gap-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm lg:grid-cols-5"
+                className="grid gap-8 overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm lg:grid-cols-5"
               >
+                <div className="relative -mx-8 -mt-8 h-48 lg:col-span-5 lg:h-56">
+                  <Image
+                    src={servicePhoto(s.slug)!.src}
+                    alt={servicePhoto(s.slug)!.alt}
+                    fill
+                    sizes="(min-width: 1280px) 1216px, 100vw"
+                    className="object-cover"
+                  />
+                </div>
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-4">
                     <ServiceIcon id={s.id} />

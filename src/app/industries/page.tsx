@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Check, ContactCta, PageHero } from "@/components/ui";
+import { photos } from "@/lib/images";
 import { industries, services } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function IndustriesPage() {
           title="The US rules that apply to your products"
           text="Each product category has its own FDA, CBP and labeling requirements. Here is an overview of the main ones we help with."
           crumbs={[{ label: "Industries", href: "/industries" }]}
+          image={photos.industries}
         >
           <div className="mt-10 flex flex-wrap gap-2">
             {industries.map((i) => (
