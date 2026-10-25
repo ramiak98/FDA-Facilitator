@@ -1,15 +1,15 @@
 import { ImageResponse } from "next/og";
+import { brandImage } from "@/lib/brand";
 
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
-export default function AppleIcon() {
+export default async function AppleIcon() {
+  const mark = await brandImage("fda-facilitator-mark.svg");
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: "#0f6fd6" }}>
-        <svg width="120" height="120" viewBox="0 0 32 32">
-          <path d="M9 16.5l4.5 4.5L23 11.5" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+      <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: "#ffffff" }}>
+        <img src={mark} width={136} height={136} alt="" />
       </div>
     ),
     size,

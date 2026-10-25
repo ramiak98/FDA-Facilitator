@@ -5,9 +5,9 @@ import { nav, services } from "@/lib/site";
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" aria-label="FDA Facilitator home">
-          <Logo />
+          <Logo className="h-12 w-auto sm:h-14" />
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
           {nav.map((item) =>
@@ -50,7 +50,7 @@ export function Header() {
         </nav>
         <Link
           href="/contact"
-          className="hidden rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-navy-800 md:inline-block"
+          className="hidden rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 md:inline-block"
         >
           Get a consultation
         </Link>

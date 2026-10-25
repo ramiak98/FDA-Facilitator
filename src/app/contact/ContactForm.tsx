@@ -146,7 +146,7 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       <button
         type="submit"
         disabled={pending}
-        className="w-full rounded-md bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-navy-800 disabled:opacity-60 sm:w-auto"
+        className="w-full rounded-md bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 disabled:opacity-60 sm:w-auto"
       >
         {pending ? "Sending..." : "Send inquiry"}
       </button>

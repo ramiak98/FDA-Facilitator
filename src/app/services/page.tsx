@@ -53,7 +53,7 @@ export default function ServicesPage() {
                   <p className="mt-5 leading-7 text-slate-600">{s.summary}</p>
                   <Link
                     href={`/services/${s.slug}`}
-                    className="mt-6 inline-block rounded-md bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-800"
+                    className="mt-6 inline-block rounded-md bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700"
                   >
                     Explore {s.title}
                   </Link>

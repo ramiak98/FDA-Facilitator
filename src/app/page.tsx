@@ -13,6 +13,7 @@ const jsonLd = {
   name: site.name,
   description: site.description,
   url: site.url,
+  logo: `${site.url}/brand/fda-facilitator-logo.svg`,
   email: site.email,
   areaServed: "US",
   knowsAbout: ["FDA registration", "US Agent", "FSVP", "Prior Notice", "Customs entry", "USPTO trademarks", "Freight logistics"],
@@ -35,7 +36,7 @@ export default function Home() {
             className="absolute inset-0 opacity-30"
             style={{
               backgroundImage:
-                "radial-gradient(circle at 80% 20%, #2b86e8 0, transparent 45%), radial-gradient(circle at 10% 90%, #12305a 0, transparent 40%)",
+                "radial-gradient(circle at 80% 20%, #42b8e8 0, transparent 45%), radial-gradient(circle at 10% 90%, #3567b0 0, transparent 40%)",
             }}
             aria-hidden="true"
           />
@@ -54,7 +55,7 @@ export default function Home() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
+                  className="rounded-md bg-accent-400 px-6 py-3 text-sm font-semibold text-navy-950 shadow-sm transition hover:bg-accent-300"
                 >
                   Get a free consultation
                 </Link>
@@ -77,7 +78,7 @@ export default function Home() {
                   ["USPTO trademark", "Protect your brand before launch"],
                 ].map(([title, note]) => (
                   <li key={title} className="flex gap-3">
-                    <span className="mt-1 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-500">
+                    <span className="mt-1 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-accent-400">
                       <svg viewBox="0 0 20 20" className="h-3 w-3 text-white" fill="currentColor" aria-hidden="true">
                         <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0z" />
                       </svg>
@@ -122,7 +123,7 @@ export default function Home() {
                 <article
                   key={s.id}
                   id={s.id}
-                  className="flex flex-col scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-brand-500/40 hover:shadow-md"
+                  className="flex flex-col scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-accent-400 hover:shadow-md"
                 >
                   <div className="relative -mx-8 -mt-8 mb-6 h-48 overflow-hidden rounded-t-2xl">
                     <Image
@@ -174,7 +175,7 @@ export default function Home() {
                 <Link
                   key={i.id}
                   href={`/industries#${i.id}`}
-                  className="rounded-xl border border-slate-200 bg-white p-6 transition hover:border-brand-500/40 hover:shadow-md"
+                  className="rounded-xl border border-slate-200 bg-white p-6 transition hover:border-accent-400 hover:shadow-md"
                 >
                   <h3 className="font-semibold text-navy-900">{i.name}</h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">{i.note}</p>
@@ -206,7 +207,7 @@ export default function Home() {
         <section id="deadlines" className="scroll-mt-16 bg-navy-900 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-widest text-brand-500">Key deadlines</p>
+              <p className="text-sm font-semibold uppercase tracking-widest text-accent-400">Key deadlines</p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 FDA renewal dates you can&apos;t miss
               </h2>
@@ -218,7 +219,7 @@ export default function Home() {
               {deadlines.map((d) => (
                 <div key={d.title} className="rounded-xl border border-white/10 bg-white/5 p-6">
                   <h3 className="font-semibold text-white">{d.title}</h3>
-                  <p className="mt-2 text-sm font-medium text-brand-500">{d.when}</p>
+                  <p className="mt-2 text-sm font-medium text-accent-400">{d.when}</p>
                   <p className="mt-3 text-sm leading-6 text-slate-400">{d.note}</p>
                 </div>
               ))}

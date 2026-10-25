@@ -1,14 +1,24 @@
 @import "tailwindcss";
 
+/* Brand palette taken from the FDA Facilitator logo:
+   brand-600 = logo dark blue (#3567B0), accent-400 = logo light blue (#42B8E8).
+   Navy shades are deep tints of the same blue, for dark sections. */
 @theme inline {
-  --color-navy-950: #071426;
-  --color-navy-900: #0b1f3a;
-  --color-navy-800: #12305a;
-  --color-navy-700: #1b4380;
-  --color-brand-600: #0f6fd6;
-  --color-brand-500: #2b86e8;
-  --color-brand-100: #e3effc;
-  --color-brand-50: #f2f7fd;
+  --color-navy-950: #0a1830;
+  --color-navy-900: #0f2445;
+  --color-navy-800: #17355f;
+  --color-navy-700: #224a82;
+  --color-brand-800: #234478;
+  --color-brand-700: #2b5596;
+  --color-brand-600: #3567b0;
+  --color-brand-500: #4a7cc4;
+  --color-brand-100: #e1eaf6;
+  --color-brand-50: #f1f5fb;
+  --color-accent-500: #2aa6da;
+  --color-accent-400: #42b8e8;
+  --color-accent-300: #7dcff1;
+  --color-accent-100: #dcf2fc;
+  --color-accent-50: #effafe;
   --font-sans: var(--font-inter);
 }
 
@@ -18,5 +28,5 @@ html {
 
 body {
   background: #ffffff;
-  color: #0b1f3a;
+  color: #0f2445;
 }
