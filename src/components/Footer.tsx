@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <Logo light />
+            <Logo light className="h-14 w-auto" />
             <p className="mt-4 max-w-sm text-sm leading-6">{site.description}</p>
           </div>
           <div>

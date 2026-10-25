@@ -60,7 +60,7 @@ export function PageHero({
         className="absolute inset-0 opacity-30"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 85% 15%, #2b86e8 0, transparent 45%), radial-gradient(circle at 5% 95%, #12305a 0, transparent 40%)",
+            "radial-gradient(circle at 85% 15%, #42b8e8 0, transparent 45%), radial-gradient(circle at 5% 95%, #3567b0 0, transparent 40%)",
         }}
         aria-hidden="true"
       />
@@ -84,7 +84,7 @@ export function PageHero({
             </ol>
           </nav>
         )}
-        <p className="text-sm font-semibold uppercase tracking-widest text-brand-500">{eyebrow}</p>
+        <p className="text-sm font-semibold uppercase tracking-widest text-accent-400">{eyebrow}</p>
         <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">{title}</h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">{text}</p>
         {children}

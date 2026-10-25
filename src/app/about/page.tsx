@@ -101,7 +101,7 @@ export default function AboutPage() {
                 <Link
                   key={s.slug}
                   href={`/services/${s.slug}`}
-                  className="rounded-xl border border-slate-200 p-6 transition hover:border-brand-500/40 hover:shadow-md"
+                  className="rounded-xl border border-slate-200 p-6 transition hover:border-accent-400 hover:shadow-md"
                 >
                   <ServiceIcon id={s.id} />
                   <h3 className="mt-4 font-semibold text-navy-900">{s.title}</h3>

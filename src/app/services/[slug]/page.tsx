@@ -49,7 +49,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href={`/contact?service=${detail.slug}`}
-              className="rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
+              className="rounded-md bg-accent-400 px-6 py-3 text-sm font-semibold text-navy-950 shadow-sm transition hover:bg-accent-300"
             >
               Get a consultation
             </Link>
@@ -116,7 +116,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
                 <div key={f.label} className="rounded-xl border border-white/10 bg-white/5 p-6">
                   <dt className="text-sm text-slate-400">{f.label}</dt>
                   <dd className="mt-2 font-semibold text-white">{f.value}</dd>
-                  {f.ref && <dd className="mt-3 text-xs text-brand-500">{f.ref}</dd>}
+                  {f.ref && <dd className="mt-3 text-xs text-accent-400">{f.ref}</dd>}
                 </div>
               ))}
             </dl>
@@ -178,7 +178,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
                 <Link
                   key={s.slug}
                   href={`/services/${s.slug}`}
-                  className="flex gap-4 rounded-xl border border-slate-200 p-6 transition hover:border-brand-500/40 hover:shadow-md"
+                  className="flex gap-4 rounded-xl border border-slate-200 p-6 transition hover:border-accent-400 hover:shadow-md"
                 >
                   <ServiceIcon id={s.id} />
                   <span>

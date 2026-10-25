@@ -15,7 +15,7 @@ export default function NotFound() {
             The page you are looking for doesn&apos;t exist or has moved.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/" className="rounded-md bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-navy-800">
+            <Link href="/" className="rounded-md bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700">
               Back to home
             </Link>
             <Link href="/contact" className="rounded-md border border-slate-300 px-6 py-3 text-sm font-semibold text-navy-900 transition hover:bg-white">
